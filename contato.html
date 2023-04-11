@@ -57,35 +57,64 @@
       </ul>
     </div>
   </div>
-
   <div class="area">
     <div class="container">
-              <div class="feedback">
-  <h3 class="mb-3">Contate-nos</h3>
-  <form action="submit-form.php" method="POST">
-    <div class="form-group">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required></textarea>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </div>
-          
+      <div class="feedback">
+        <h3 class="mb-3">Contate-nos</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required class="error">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="error">
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required class="error"></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Enviar</button>
+           </div>
+          </div>
         </form>
       </div>
     </div>
+    <script>
+    // Seleciona o botão de enviar
+const enviarBtn = document.querySelector('button.btn-primary');
+
+// Adiciona um listener de evento para o clique no botão de enviar
+enviarBtn.addEventListener('click', () => {
+  // Seleciona todos os campos de entrada que são obrigatórios
+  const inputs = document.querySelectorAll('input[required], textarea[required]');
+
+  // Define uma variável para rastrear se há algum campo em branco
+  let vazio = false;
+
+  // Itera sobre todos os campos de entrada e verifica se algum deles está vazio
+  inputs.forEach(input => {
+    if (!input.value.trim()) {
+      vazio = true;
+    }
+  });
+
+  // Se houver algum campo em branco, adiciona a classe "shake" ao formulário
+  if (vazio) {
+    document.querySelector('form').classList.add('shake');
+
+    // Remove a classe "shake" após 500ms (o tempo de duração da animação)
+    setTimeout(() => {
+      document.querySelector('form').classList.remove('shake');
+    }, 500);
+  }
+});
+
+    </script>
+  <div class="footer">
+    <p>&copy; 2023 Todos os direitos reservados</p>
   </div>
-    <div class="footer">
-      <p>&copy; 2023 Todos os direitos reservados</p>
-    </div>
 </body>
 
-</html>
+</html>  

@@ -5,7 +5,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body, html {
+body,
+html {
   min-height: 100vh;
   width: 100%;
   background-color: #535353;
@@ -14,14 +15,18 @@ body, html {
 .area {
   position: relative;
   min-height: 100%;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: scale(0.9);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
+
+input.error,
+textarea.error {
+  border: 2px solid rgb(253, 253, 253);
 }
 
 input,
@@ -35,6 +40,7 @@ textarea {
   background-color: #f7f7f7;
   padding: 5px;
   resize: none;
+  transition: border-color 0.2s ease-in-out; /* adicionado para suavizar a mudança de cor da borda */
 }
 
 #mensagem {
@@ -88,7 +94,7 @@ textarea {
   color: #fff;
 }
 
-.btn-form-submmit{
+.btn-form-submit {
   float: right;
   margin-top: 10px;
   width: 80px;
@@ -111,11 +117,33 @@ textarea {
     align-items: center;
   }
 
-}
-
-
   form {
     width: 100%;
     max-width: 100%;
   }
+}
 
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-10px); }
+  20%, 80% { transform: translateX(10px); }
+  30%, 50%, 70% { transform: translateX(-10px); }
+  40%, 60% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
