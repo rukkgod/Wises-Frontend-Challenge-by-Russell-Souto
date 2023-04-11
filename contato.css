@@ -10,7 +10,8 @@ body, html {
   width: 100%;
   background-color: #535353;
 }
-.area{
+
+.area {
   position: relative;
   min-height: 100%;
 }
@@ -18,6 +19,26 @@ body, html {
 form {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  padding: 5px;
+  resize: none;
+}
+
+#mensagem {
+  height: 100px;
 }
 
 .nav-link {
@@ -38,8 +59,12 @@ form {
 
 .feedback {
   background-color: #fff;
+  width: 80%;
+  min-width: 320px;
+  max-width: 1200px;
   padding: 30px;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 .footer {
@@ -64,8 +89,13 @@ form {
 }
 
 .btn-form-submmit{
-  float: left;
+  float: right;
+  margin-top: 10px;
   width: 80px;
+}
+
+.feedback-textarea {
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -82,3 +112,10 @@ form {
   }
 
 }
+
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
