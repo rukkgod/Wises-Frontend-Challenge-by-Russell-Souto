@@ -3,7 +3,7 @@
 ![HTML](https://img.shields.io/badge/homebridge-%23491F59.svg?style=for-the-badge&logo=homebridge&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-0078d7.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-https://rukkgod.github.io/Wises-Frontend-Challenge-by-Russell-Souto/
+🔗 https://rukkgod.github.io/Wises-Frontend-Challenge-by-Russell-Souto/
 
 Este é um projeto desenvolvido por Russell Souto para participar de uma seletiva de emprego como desenvolvedor FRONT END JUNIOR na empresa WISES.
 
