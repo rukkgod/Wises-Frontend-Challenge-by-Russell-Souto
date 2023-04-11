@@ -6,15 +6,18 @@
 }
 
 body, html {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #535353;
+}
+.area{
+  position: relative;
+  min-height: 100%;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .nav-link {
@@ -43,7 +46,8 @@ form {
   background-color: #1b1b1b;
   color: #fff;
   padding: 20px;
-  position: fixed;
+  margin-top: auto;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -59,6 +63,11 @@ form {
   color: #fff;
 }
 
+.btn-form-submmit{
+  float: left;
+  width: 80px;
+}
+
 @media only screen and (min-width: 1024px) {
   .container-fluid button {
     display: none;
@@ -72,7 +81,4 @@ form {
     align-items: center;
   }
 
-  .footer {
-    position: fixed;
-  }
 }

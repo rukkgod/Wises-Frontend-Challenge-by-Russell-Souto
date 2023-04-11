@@ -11,10 +11,11 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: rgb(83, 83, 83);
   display: flex;
   flex-direction: column;
+  
 }
 
 .nav-link {
@@ -32,6 +33,7 @@ body {
   border-radius: 0px 0px 5px 5px;
   text-align: justify;
   padding-bottom: 100px; /* Adicione esta linha */
+  position: relative;
 }
 
 .conteudo h2 {
@@ -44,13 +46,10 @@ body {
   background-color: #1b1b1b;
   color: white;
   padding: 20px;
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
+  margin-top: auto;
+
 }
 
 
@@ -58,6 +57,7 @@ body {
 .bi-justify {
   color: white;
 }
+
 
 @media only screen and (min-width: 1024px) {
   .container-fluid button {
@@ -71,12 +71,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
   }
 }
